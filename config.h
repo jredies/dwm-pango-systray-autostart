@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
+static const char font[]            = "Sans 8";
 
 static const char normbordercolor[] = "#3F3F3F";
 static const char normbgcolor[]     = "#3F3F3F";
@@ -13,6 +13,8 @@ static const char selfgcolor[]      = "#DCDCCC";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
+
+static const Bool statusmarkup      = True;     /* True means use pango markup in status message */
 
 static const Bool showsystray       = True;     /* False means no systray */
 static const Bool showbar           = True;     /* False means no bar */
