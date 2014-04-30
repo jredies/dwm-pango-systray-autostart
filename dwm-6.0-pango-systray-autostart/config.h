@@ -1,16 +1,16 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "Monaco 12";
+static const char font[]            = "Droid Sans Mono 12";
 
 static const char normbordercolor[] = "#3F3F3F";
 static const char normbgcolor[]     = "#3F3F3F";
 static const char normfgcolor[]     = "#DCDCCC";
-static const char selbordercolor[]  = "#3F3F3F";
+static const char selbordercolor[]  = "#F0DFAF";
 static const char selbgcolor[]      = "#333333";
 static const char selfgcolor[]      = "#DCDCCC";
 
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 
@@ -53,14 +53,14 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "gnome-terminal --hide-menubar", NULL };
-static const char *filecmd[]  = { "nemo --no-desktop", NULL };
+static const char *termcmd[]  = { "gnome-terminal", "--hide-menubar", NULL };
+static const char *filecmd[]  = { "nemo", "--no-desktop", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,							XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,												XK_n, 			spawn,          {.v = filecmd } },
+	{ MODKEY,												XK_n, 		 spawn,         {.v = filecmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
